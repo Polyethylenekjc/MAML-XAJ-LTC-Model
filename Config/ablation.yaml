@@ -1,0 +1,128 @@
+analyzers:
+- name: plot_analyzer
+- name: metrics_analyzer
+- name: shap_analyzer
+  params:
+    model_name: grku_time_series_model
+- name: mape_interval_analyzer
+- name: summary_analyzer
+data:
+  datasets:
+  - enabled: true
+    name: BR_U
+    path: data/boertalahe_博尔塔拉河_上游.csv
+    processors: &id001
+    - name: minimax
+      params: {}
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: BR_M
+    path: data/boertalahe_博尔塔拉河_中游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: BR_D
+    path: data/boertalahe_博尔塔拉河_下游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_U
+    path: data/nanpanjiang_南盘江_上游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_M
+    path: data/nanpanjiang_南盘江_中游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_D
+    path: data/nanpanjiang_南盘江_下游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_U
+    path: data/taohe_洮河上游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_M
+    path: data/taohe_洮河中游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_D
+    path: data/taohe_洮河下游.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  default_dataset:
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+forecast_horizon: 1
+models:
+  grku_time_series_model:
+    enabled: false
+    params:
+      grid_eps: 0.05
+      grid_range:
+      - -1
+      - 1
+      grid_size: 10
+      hidden_dim: 128
+      input_dim: 10
+      num_layers: 3
+      output_dim: 1
+      rag_dataset_path: data/meta
+      ragon: true
+      scale_base: 1
+      scale_noise: 0.2
+      scale_spline: 1.5
+      seq_length: 15
+      spline_order: 3
+      top_k: 4
+    trainer:
+      batch_size: 64
+      fine_tune_lr: 0.01
+      fine_tune_steps: 20
+      forecast_horizon: 1
+      inner_update_steps: 5
+      learning_rate: 0.001
+      meta_dataset_dir: /home/fifth/code/Python/GTLF/data/meta
+      meta_epochs: 20
+      meta_learning_rate: 0.001
+      meta_model_path: /home/fifth/code/Python/GTLF/meta_models/
+      physics_dataset_dir: data/physical
+      physics_weight: 0.15
+      save_plot_path: .pic
+      target_column: runoffs
+      type: PhysicsMetaLearningTrainer
+      use_physics_in_meta_only: true
+      window_size: 15
+    type: grku_time_series_model
+    # trainer:
+    #   batch_size: 32
+    #   epochs: 20
+    #   learning_rate: 0.001
+output:
+  analysis_result_path: res/analysis/
+  data_result_path: res/data/

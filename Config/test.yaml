@@ -1,0 +1,1129 @@
+analyzers:
+- name: plot_analyzer
+- name: metrics_analyzer
+- name: shap_analyzer
+  params:
+    model_name: gr2ku_time_series_model
+- name: mape_interval_analyzer
+- name: summary_analyzer
+data:
+  datasets:
+  - enabled: true
+    name: BR_U
+    path: data/boertalahe_BRU.csv
+    processors: &id001
+    - name: minimax
+      params: {}
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15891
+    path: /home/fifth/code/Python/GTLF/data/meta/ganjiang_ganjiang_basin15891.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16725
+    path: /home/fifth/code/Python/GTLF/data/meta/tongtianhe_tongtianhe_basin16725.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17610
+    path: /home/fifth/code/Python/GTLF/data/meta/dangquecangbu(maquanhe)_dangquecangbu(maquanhe)_basin17610.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15083
+    path: /home/fifth/code/Python/GTLF/data/meta/changjiang_changjiang_basin15083.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15107
+    path: /home/fifth/code/Python/GTLF/data/meta/nanpanjiang_nanpanjiang_basin15107.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15888
+    path: /home/fifth/code/Python/GTLF/data/meta/ganjiang_ganjiang_basin15888.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16573
+    path: /home/fifth/code/Python/GTLF/data/meta/jinshajiang_jinshajiang_basin16573.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17611
+    path: /home/fifth/code/Python/GTLF/data/meta/dangquecangbu(maquanhe)_dangquecangbu(maquanhe)_basin17611.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16094
+    path: /home/fifth/code/Python/GTLF/data/meta/xiangjiang_xiangjiang_basin16094.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11952
+    path: /home/fifth/code/Python/GTLF/data/meta/wujiahe(wuzhuerguolei)_wujiahe(wuzhuerguolei)_basin11952.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3710
+    path: /home/fifth/code/Python/GTLF/data/meta/zhaqu_zhaqu_basin3710.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11951
+    path: /home/fifth/code/Python/GTLF/data/meta/wujiahe(wuzhuerguolei)_wujiahe(wuzhuerguolei)_basin11951.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14831
+    path: /home/fifth/code/Python/GTLF/data/meta/xijiang_xijiang_basin14831.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16727
+    path: /home/fifth/code/Python/GTLF/data/meta/tongtianhe_tongtianhe_basin16727.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin9123
+    path: /home/fifth/code/Python/GTLF/data/meta/yaluzangbujiang_yaluzangbujiang_basin9123.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16943
+    path: /home/fifth/code/Python/GTLF/data/meta/xijiang_xijiang_basin16943.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3579
+    path: /home/fifth/code/Python/GTLF/data/meta/lancangjiang_lancangjiang_basin3579.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11945
+    path: /home/fifth/code/Python/GTLF/data/meta/huanghe_huanghe_basin11945.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19544
+    path: /home/fifth/code/Python/GTLF/data/meta/songachahe_songachahe_basin19544.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19474
+    path: /home/fifth/code/Python/GTLF/data/meta/heilongjiang_heilongjiang_basin19474.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17609
+    path: /home/fifth/code/Python/GTLF/data/meta/dangquecangbu(maquanhe)_dangquecangbu(maquanhe)_basin17609.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14813
+    path: /home/fifth/code/Python/GTLF/data/meta/huaihe_huaihe_basin14813.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16565
+    path: /home/fifth/code/Python/GTLF/data/meta/jinshajiang_jinshajiang_basin16565.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15890
+    path: /home/fifth/code/Python/GTLF/data/meta/ganjiang_ganjiang_basin15890.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3585
+    path: /home/fifth/code/Python/GTLF/data/meta/lancangjiang_lancangjiang_basin3585.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Tenxian
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Tenxian.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19415
+    path: /home/fifth/code/Python/GTLF/data/meta/heilongjiang_heilongjiang_basin19415.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin8826
+    path: /home/fifth/code/Python/GTLF/data/meta/yaluzangbujiang_yaluzangbujiang_basin8826.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19468
+    path: /home/fifth/code/Python/GTLF/data/meta/heilongjiang_heilongjiang_basin19468.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin8812
+    path: /home/fifth/code/Python/GTLF/data/meta/zhajiacangbu(xianggaqu)_zhajiacangbu(xianggaqu)_basin8812.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16942
+    path: /home/fifth/code/Python/GTLF/data/meta/xijiang_xijiang_basin16942.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19545
+    path: /home/fifth/code/Python/GTLF/data/meta/songachahe_songachahe_basin19545.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3581
+    path: /home/fifth/code/Python/GTLF/data/meta/lancangjiang_lancangjiang_basin3581.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15748
+    path: /home/fifth/code/Python/GTLF/data/meta/jinghangyunhe(zhongyunhe)_jinghangyunhe(zhongyunhe)_basin15748.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3582
+    path: /home/fifth/code/Python/GTLF/data/meta/lancangjiang_lancangjiang_basin3582.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15105
+    path: /home/fifth/code/Python/GTLF/data/meta/nanpanjiang_nanpanjiang_basin15105.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15887
+    path: /home/fifth/code/Python/GTLF/data/meta/ganjiang_ganjiang_basin15887.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17608
+    path: /home/fifth/code/Python/GTLF/data/meta/dangquecangbu(maquanhe)_dangquecangbu(maquanhe)_basin17608.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11948
+    path: /home/fifth/code/Python/GTLF/data/meta/huanghe_huanghe_basin11948.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15080
+    path: /home/fifth/code/Python/GTLF/data/meta/changjiang_changjiang_basin15080.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3703
+    path: /home/fifth/code/Python/GTLF/data/meta/zhaqu_zhaqu_basin3703.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14830
+    path: /home/fifth/code/Python/GTLF/data/meta/xijiang_xijiang_basin14830.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19467
+    path: /home/fifth/code/Python/GTLF/data/meta/heilongjiang_heilongjiang_basin19467.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14811
+    path: /home/fifth/code/Python/GTLF/data/meta/huaihe_huaihe_basin14811.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17612
+    path: /home/fifth/code/Python/GTLF/data/meta/dangquecangbu(maquanhe)_dangquecangbu(maquanhe)_basin17612.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16095
+    path: /home/fifth/code/Python/GTLF/data/meta/xiangjiang_xiangjiang_basin16095.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16729
+    path: /home/fifth/code/Python/GTLF/data/meta/tongtianhe_tongtianhe_basin16729.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16093
+    path: /home/fifth/code/Python/GTLF/data/meta/xiangjiang_xiangjiang_basin16093.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14812
+    path: /home/fifth/code/Python/GTLF/data/meta/huaihe_huaihe_basin14812.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Pingnan
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Pingnan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3586
+    path: /home/fifth/code/Python/GTLF/data/meta/lancangjiang_lancangjiang_basin3586.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3718
+    path: /home/fifth/code/Python/GTLF/data/meta/zhaqu_zhaqu_basin3718.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Lianhuashan
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Lianhuashan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15740
+    path: /home/fifth/code/Python/GTLF/data/meta/huaihe_huaihe_basin15740.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15889
+    path: /home/fifth/code/Python/GTLF/data/meta/ganjiang_ganjiang_basin15889.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11950
+    path: /home/fifth/code/Python/GTLF/data/meta/wujiahe(wuzhuerguolei)_wujiahe(wuzhuerguolei)_basin11950.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16724
+    path: /home/fifth/code/Python/GTLF/data/meta/tongtianhe_tongtianhe_basin16724.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Wuxuan
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Wuxuan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16941
+    path: /home/fifth/code/Python/GTLF/data/meta/xijiang_xijiang_basin16941.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin8766
+    path: /home/fifth/code/Python/GTLF/data/meta/zhajiacangbu(xianggaqu)_zhajiacangbu(xianggaqu)_basin8766.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15841
+    path: /home/fifth/code/Python/GTLF/data/meta/jinghangyunhe(jiangnanyunhe)_jinghangyunhe(jiangnanyunhe)_basin15841.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11953
+    path: /home/fifth/code/Python/GTLF/data/meta/wujiahe(wuzhuerguolei)_wujiahe(wuzhuerguolei)_basin11953.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Cangwu
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Cangwu.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15081
+    path: /home/fifth/code/Python/GTLF/data/meta/changjiang_changjiang_basin15081.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15075
+    path: /home/fifth/code/Python/GTLF/data/meta/jinghangyunhe(hanzhuangyunhe)_jinghangyunhe(hanzhuangyunhe)_basin15075.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17478
+    path: /home/fifth/code/Python/GTLF/data/meta/yaluzangbujiang_yaluzangbujiang_basin17478.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16731
+    path: /home/fifth/code/Python/GTLF/data/meta/tongtianhe_tongtianhe_basin16731.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15082
+    path: /home/fifth/code/Python/GTLF/data/meta/changjiang_changjiang_basin15082.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15103
+    path: /home/fifth/code/Python/GTLF/data/meta/nanpanjiang_nanpanjiang_basin15103.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11946
+    path: /home/fifth/code/Python/GTLF/data/meta/huanghe_huanghe_basin11946.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Guiping
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Guiping.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16571
+    path: /home/fifth/code/Python/GTLF/data/meta/jinshajiang_jinshajiang_basin16571.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Yunfu
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Yunfu.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19543
+    path: /home/fifth/code/Python/GTLF/data/meta/songachahe_songachahe_basin19543.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16572
+    path: /home/fifth/code/Python/GTLF/data/meta/jinshajiang_jinshajiang_basin16572.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16091
+    path: /home/fifth/code/Python/GTLF/data/meta/xiangjiang_xiangjiang_basin16091.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19466
+    path: /home/fifth/code/Python/GTLF/data/meta/heilongjiang_heilongjiang_basin19466.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11949
+    path: /home/fifth/code/Python/GTLF/data/meta/huanghe_huanghe_basin11949.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11954
+    path: /home/fifth/code/Python/GTLF/data/meta/wujiahe(wuzhuerguolei)_wujiahe(wuzhuerguolei)_basin11954.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin17093
+    path: /home/fifth/code/Python/GTLF/data/meta/nanpanjiang_nanpanjiang_basin17093.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3712
+    path: /home/fifth/code/Python/GTLF/data/meta/zhaqu_zhaqu_basin3712.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19546
+    path: /home/fifth/code/Python/GTLF/data/meta/songachahe_songachahe_basin19546.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin15108
+    path: /home/fifth/code/Python/GTLF/data/meta/nanpanjiang_nanpanjiang_basin15108.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14808
+    path: /home/fifth/code/Python/GTLF/data/meta/huaihe_huaihe_basin14808.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin19547
+    path: /home/fifth/code/Python/GTLF/data/meta/songachahe_songachahe_basin19547.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin3719
+    path: /home/fifth/code/Python/GTLF/data/meta/zhaqu_zhaqu_basin3719.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin7698
+    path: /home/fifth/code/Python/GTLF/data/meta/zhajiacangbu(xianggaqu)_zhajiacangbu(xianggaqu)_basin7698.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin8824
+    path: /home/fifth/code/Python/GTLF/data/meta/yaluzangbujiang_yaluzangbujiang_basin8824.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Wuzhou
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Wuzhou.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Mengjiang
+    path: /home/fifth/code/Python/GTLF/data/meta/xunjiang_Mengjiang.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin7697
+    path: /home/fifth/code/Python/GTLF/data/meta/zhajiacangbu(xianggaqu)_zhajiacangbu(xianggaqu)_basin7697.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16092
+    path: /home/fifth/code/Python/GTLF/data/meta/xiangjiang_xiangjiang_basin16092.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin8792
+    path: /home/fifth/code/Python/GTLF/data/meta/zhajiacangbu(xianggaqu)_zhajiacangbu(xianggaqu)_basin8792.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin14808
+    path: /home/fifth/code/Python/GTLF/data/meta/changjiang_changjiang_basin14808.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin9122
+    path: /home/fifth/code/Python/GTLF/data/meta/yaluzangbujiang_yaluzangbujiang_basin9122.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin11947
+    path: /home/fifth/code/Python/GTLF/data/meta/huanghe_huanghe_basin11947.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: basin16574
+    path: /home/fifth/code/Python/GTLF/data/meta/jinshajiang_jinshajiang_basin16574.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: BR_M
+    path: data/boertalahe_BRM.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: BR_D
+    path: data/boertalahe_BRD.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_U
+    path: data/nanpanjiang_NAU.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_M
+    path: data/nanpanjiang_NAM.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: NA_D
+    path: data/nanpanjiang_NAD.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_U
+    path: data/taohe_TAU.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_M
+    path: data/taohe_TAM.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: TA_D
+    path: data/taohe_TAD.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Cangwu
+    path: data/xunjiang_Cangwu.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Guiping
+    path: data/xunjiang_Guiping.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Lianhuashan
+    path: data/xunjiang_Lianhuashan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Mengjiang
+    path: data/xunjiang_Mengjiang.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Pingnan
+    path: data/xunjiang_Pingnan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Tenxian
+    path: data/xunjiang_Tenxian.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Wuxuan
+    path: data/xunjiang_Wuxuan.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Wuzhou
+    path: data/xunjiang_Wuzhou.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  - enabled: true
+    name: Yunfu
+    path: data/xunjiang_Yunfu.csv
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+  default_dataset:
+    processors: *id001
+    target_column: runoffs
+    test_size: 0.2
+    window: 15
+forecast_horizon: 1
+models:
+  KAN:
+    enabled: false
+    params:
+      feature_size: 10
+      forecast_horizon: 1
+      grid_eps: 0.02
+      grid_range:
+      - -1
+      - 1
+      grid_size: 5
+      kan_layers_hidden:
+      - 150
+      - 64
+      - 32
+      - 1
+      scale_base: 1.0
+      scale_noise: 0.1
+      scale_spline: 1.0
+      seq_length: 15
+      spline_order: 3
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: KAN
+  attention_gru:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+    trainer:
+      batch_size: 32
+      epochs: 100
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: attention_gru
+  cnn_gru_attention:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 50
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: cnn_gru_attention
+  cnn_lstm:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 50
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: cnn_lstm
+  cnn_transformer:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_heads: 4
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 50
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: cnn_transformer
+  ct_full_flow_model:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_heads: 4
+      num_layers: 2
+      pe_hidden_dim: 64
+      pe_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 64
+      fine_tune_lr: 0.001
+      fine_tune_steps: 20
+      forecast_horizon: 1
+      inner_update_steps: 5
+      learning_rate: 0.001
+      meta_dataset_dir: /home/fifth/code/Python/GTLF/data/meta
+      meta_epochs: 20
+      meta_learning_rate: 0.001
+      meta_model_path: /home/fifth/code/Python/GTLF/meta_models/
+      physics_dataset_dir: /home/fifth/code/Python/GTLF/data/physical
+      physics_weight: 0.15
+      save_plot_path: .pic
+      target_column: runoffs
+      type: PhysicsMetaLearningTrainer
+      use_physics_in_meta_only: true
+    type: ct_full_flow
+  eklt_model:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      input_dim: 10
+      lstm_hidden_dim: 64
+      lstm_num_layers: 2
+      output_dim: 1
+      seq_length: 30
+      transformer_d_model: 64
+      transformer_dim_feedforward: 128
+      transformer_nhead: 8
+      transformer_num_layers: 2
+    trainer:
+      batch_size: 32
+      epochs: 100
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: eklt_model
+  full_flow_grku_time_series_model:
+    enabled: false
+    params:
+      grid_eps: 0.02
+      grid_range:
+      - -1
+      - 1
+      grid_size: 5
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 3
+      output_dim: 1
+      scale_base: 1.0
+      scale_noise: 0.1
+      scale_spline: 1.0
+      seq_length: 15
+      spline_order: 3
+    trainer:
+      batch_size: 64
+      fine_tune_lr: 0.001
+      fine_tune_steps: 20
+      forecast_horizon: 1
+      inner_update_steps: 5
+      learning_rate: 0.0001
+      meta_dataset_dir: /home/fifth/code/Python/GTLF/data/classified/cluster_0
+      meta_epochs: 20
+      meta_learning_rate: 0.0001
+      meta_model_path: /home/fifth/code/Python/GTLF/meta_models/
+      physics_dataset_dir: /home/fifth/code/Python/GTLF/data/classified/cluster_0
+      physics_weight: 0
+      save_plot_path: .pic
+      target_column: runoffs
+      type: PhysicsMetaLearningTrainer
+      use_physics_in_meta_only: true
+      window_size: 15
+    type: grku_time_series_model
+  full_flow_ltc_time_series_model:
+    enabled: false
+    params:
+      forecast_steps: 1
+      hidden_dim: 32
+      input_dim: 10
+      num_layers: 1
+      output_dim: 1
+      seq_length: 15
+      window_size: 15
+    trainer:
+      batch_size: 32
+      epochs: 30
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: full_flow_ltc_time_series_model
+  grku_time_series_model:
+    enabled: false
+    params:
+      grid_eps: 0.05
+      grid_range:
+      - -1
+      - 1
+      grid_size: 10
+      hidden_dim: 128
+      input_dim: 10
+      num_layers: 3
+      output_dim: 1
+      rag_dataset_path: data/meta
+      ragon: true
+      scale_base: 1
+      scale_noise: 0.2
+      scale_spline: 1.5
+      seq_length: 15
+      spline_order: 3
+      top_k: 4
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: full_flow_grku_time_series_model
+  gru_fcn:
+    enabled: false
+    params:
+      dropout: 0.1
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 50
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: gru_fcn
+  gru_time_series_model:
+    enabled: false
+    params:
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: gru_time_series_model
+  lstm_time_series_model:
+    enabled: false
+    params:
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: lstm_time_series_model
+  simple_pytorch_model:
+    enabled: false
+    params:
+      forecast_steps: 1
+      input_dim: 10
+      output_dim: 1
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: simple_pytorch_model
+  tpt_model:
+    enabled: false
+    params:
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      output_dim: 1
+      period: 7
+      seq_length: 15
+    trainer:
+      batch_size: 32
+      epochs: 100
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: tpt_model
+  vmdi_lstm_ed_model:
+    enabled: false
+    params:
+      dropout: 0.2
+      forecast_steps: 1
+      hidden_dim: 64
+      input_dim: 10
+      num_layers: 2
+      output_dim: 1
+      seq_length: 15
+      target_feature_index: 3
+    trainer:
+      batch_size: 32
+      epochs: 20
+      learning_rate: 0.0001
+      type: BaseModelTrainer
+    type: vmdi_lstm_ed_model
+output:
+  analysis_result_path: res/analysis/
+  data_result_path: res/data/
